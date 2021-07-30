@@ -1,0 +1,114 @@
+.complex {
+    padding: 50px 10px;
+    // .complex__title
+    background-color: #FDDBAF;
+
+    &__title {
+        text-align: left;
+        margin-bottom: 50px;
+        h2 {
+            margin: 0;
+            font-family: 'Tienne-black', sans-serif;
+            font-weight: 800;
+            font-size: 42px;
+            line-height: 1.1;
+            span {
+                color: #9C0D0F;
+            }
+        }
+    }
+
+    // .complex__body
+
+    &__body {
+
+    }
+
+    // .complex__item
+
+    &__item {
+        margin-bottom: 50px;
+
+    }
+}
+.container {
+}
+.accordeon-btn {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px 0;
+    padding-right: 30px;
+    text-align: left;
+    font-family: 'Tienne-reg', sans-serif;
+    font-size: 36px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+    &.active {
+        &::after {
+            opacity: 0;
+        }
+    }
+    span {
+        color: #9C0D0F;
+        cursor: pointer;
+    }
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+        right: 0;
+        top: 50%;
+        transition: opacity .15s ease-in ;
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+.accordeon {
+
+    // .accordeon__info
+
+    &__info {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .15s ease-in-out;
+        p {
+            padding: 10px 0;
+            margin: 0;
+            max-width: 800px;
+            font-size: 24px;
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .complex {
+        padding: 30px 10px;
+        &__title {
+            h2 {
+                font-size: 36px;
+            }
+        }
+    }
+    .accordeon-btn {
+        font-size: 24px;
+        padding: 10px 0;
+        padding-right: 30px;
+    }
+}

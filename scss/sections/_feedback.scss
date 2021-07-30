@@ -1,0 +1,125 @@
+/* 
+Feedback style start
+*/
+
+.feedback {
+    padding: 50px 10px;
+    background-color: #000;
+    color: #fff;
+    // .feedback__title
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+        h2 {
+            margin: 0;
+            font-size: 35px;
+            line-height: 1.2;
+            font-family: 'Tienne-black', sans-serif;
+        }
+    }
+
+    // .feedback__form
+
+    &__form {
+        form {
+            font-family: 'Tienne-reg', sans-serif;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            input {
+                box-sizing: border-box;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                max-width: 400px;
+                width: 100%;
+                padding: 10px 0;
+                padding-left: 50px;
+                font-size: 25px;
+                color: #fff;
+                border-bottom: 2px solid #9C0D0F;
+                position: relative;
+                &::placeholder {
+                    color: #fff;
+                }
+                margin-right: 50px;
+            }
+            button {
+                max-width: 400px;
+                width: 100%;
+                background-color: transparent;
+                color: #fff;
+                font-size: 25px;
+                border: 2px solid #9C0D0F;
+                cursor: pointer;
+                transition: transform .15s ease-in-out;
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+
+    // .feedback__pp
+
+    &__pp {
+        text-align: left;
+        span {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Tienne-reg', sans-serif;
+        }
+    }
+}
+.container {
+}
+.name-form-in {
+    background-image: url(assets/img/icons/profile-ico.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    
+}
+.phone-form-in {
+    background-image: url(assets/img/icons/phone-ico.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.submit-form-in {
+}
+
+@media (max-width:768px) {
+    .feedback {
+        padding: 30px 10px;
+        &__title {
+            h2 {
+                font-size: 30px;
+            }
+        }
+        &__form {
+            form {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                input {
+                    margin: 0 0 20px;
+                }
+                button {
+                    padding: 10px 20px;
+                }
+            }
+        }
+        &__pp {
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+}
+/* 
+Feedback style end
+*/
